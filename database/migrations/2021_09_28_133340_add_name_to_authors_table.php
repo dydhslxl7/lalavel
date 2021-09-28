@@ -25,7 +25,6 @@ class AddNameToAuthorsTable extends Migration
      */
     public function down()
     {
-        
         Schema::table('authors', function (Blueprint $table) {
             $table->dropColumn('name');
         });
