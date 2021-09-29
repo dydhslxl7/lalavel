@@ -12,7 +12,7 @@ class AddNameToAuthorsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    { 
         Schema::table('authors', function (Blueprint $table) {
             $table->string('name')->nullable();
         });
