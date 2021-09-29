@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+// use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ArticlesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // $items = ['apple', 'banana', 'tomato'];
+// Route::get('/', function () {
+//     // $items = ['apple', 'banana', 'tomato'];
 
-    // return view('welcome', ['items'=>$items]);
+//     // return view('welcome', ['items'=>$items]);
 
-    return view('welcome');
-});
+//     return view('welcome');
+// });
+
+// Route::get('/', [WelcomeController::class, 'index']);
+
+Route::resource('articles', ArticlesController::class);
